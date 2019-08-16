@@ -3,6 +3,6 @@ An basic aplication of minimax algorithm to create an artifical oponent to play 
 
 Website and server: HTML & Flask(python)
 
-IA: python
+Oponent: python3
 
 Chess library: python-chess
