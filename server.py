@@ -13,7 +13,7 @@ def actualiza_tablero():
         if request.method == 'POST':
                 if 'move' in request.form:
                         move = request.form["move"]
-                        game.move_piece(move)
+                        game.move_piece_san(move)
                         board_image = game.render_image()
                         return render_template('handleAction.html', board_image=Markup(board_image))
 
@@ -28,5 +28,7 @@ def actualiza_tablero():
                         board_image = game.render_image()
                         return render_template('index.html', board_image=Markup(board_image))
 
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+        app.run(debug=True)
