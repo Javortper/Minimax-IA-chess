@@ -13,22 +13,21 @@ def actualiza_tablero():
         if request.method == 'POST':
                 if 'move' in request.form:
                         move = request.form["move"]
-                        game.move_piece_san(move)
+                        game.move_piece_uci(move)
+                        game.enemy_movement()
                         board_image = game.render_image()
                         return render_template('handleAction.html', board_image=Markup(board_image))
 
                 #TODO: NO FUNCIONAN
-                elif request.form['back'] == 'Deshacer movimiento':
-                        game.undo_move()
-                        board_image = game.render_image()
-                        return render_template('handleAction.html', board_image=Markup(board_image))
+                # elif request.form['back'] == 'Deshacer movimiento':
+                #         game.undo_move()
+                #         board_image = game.render_image()
+                #         return render_template('handleAction.html', board_image=Markup(board_image))
 
-                elif request.form['reset'] == 'Reiniciar tablero':
-                        game.reset_game()
-                        board_image = game.render_image()
-                        return render_template('index.html', board_image=Markup(board_image))
-
-
+                # elif request.form['reset'] == 'Reiniciar tablero':
+                #         game.reset_game()
+                #         board_image = game.render_image()
+                #         return render_template('index.html', board_image=Markup(board_image))
 
 if __name__ == "__main__":
         app.run(debug=True)
