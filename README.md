@@ -1,8 +1,5 @@
 # Minimax-IA-chess
-An basic aplication of minimax algorithm to create an artifical oponent to play chess
+Basic aplication of minimax algorithm to create an artifical oponent to play chess
 
-Website and server: HTML & Flask(python)
-
-Oponent: python3
-
-Chess library: python-chess
+Website and server: HTML and Flask
+Chess library: Python-chess
